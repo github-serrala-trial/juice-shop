@@ -19,11 +19,13 @@ jobs:
       with:
         node-version: '14'
 
+    - name: Install dependencies
+      run: npm install
+
     - name: Sync GitHub Issue with Jira
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Automatically provided by GitHub Actions
         JIRA_URL: ${{ secrets.JIRA_URL }}
         JIRA_EMAIL: ${{ secrets.JIRA_EMAIL }}
         JIRA_API_TOKEN: ${{ secrets.JIRA_API_TOKEN }}
-      run: |
-        node sync.js
+      run: node sync.js
