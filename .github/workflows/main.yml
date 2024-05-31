@@ -1,0 +1,29 @@
+name: Sync GitHub Issues with Jira
+
+on:
+  issues:
+    types: [opened, edited, closed]
+  issue_comment:
+    types: [created, edited]
+
+jobs:
+  sync_with_jira:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+
+    - name: Sync GitHub Issue with Jira
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        JIRA_URL: ${{ secrets.JIRA_URL }}
+        JIRA_EMAIL: ${{ secrets.JIRA_EMAIL }}
+        JIRA_API_TOKEN: ${{ secrets.JIRA_API_TOKEN }}
+      run: |
+        node sync.js
