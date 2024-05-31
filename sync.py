@@ -2,10 +2,6 @@ import os
 import json
 import base64
 import requests
-from dotenv import load_dotenv
-
-# Load environment variables from .env file
-load_dotenv()
 
 def handle_github_event(event):
     action = event.get('action')
