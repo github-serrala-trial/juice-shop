@@ -323,3 +323,5 @@ OWASP Juice Shop and any contributions are Copyright © by Bjoern Kimminich & th
 Some tests
 key = aghz738jmabjkkk3zhuballzbl261o
 new stuff AIzaSyAQfxPJiounkhOjODEOSZieffeBv6yft3P
+new key: AIzaSyAQfxPJiounkhOjODEOSZieffeBv6yft3P
+second apiKey=AIzaefgh0123456789_-ABCDEFGHIJKLMNOPQRS;
