@@ -212,7 +212,7 @@
     "@types/js-yaml": "^3.12.6",
     "@types/jsonwebtoken": "^8.5.0",
     "@types/jws": "^3.2.5",
-    "@types/mocha": "^8.1.1",
+    "@types/mocha": "^10.0.8",
     "@types/morgan": "^1.9.2",
     "@types/multer": "^1.4.5",
     "@types/node": "^17.0.36",
